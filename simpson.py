@@ -36,4 +36,4 @@ f = lambda x: exp.subs('x', x)
 integral = simpson(f, a, b, n)
 
 # Resultado
-print(f"Aproximação de {sp.simplify(integral)}")
+print(f"Aproximação de {sp.simplify(integral):.5f}")
