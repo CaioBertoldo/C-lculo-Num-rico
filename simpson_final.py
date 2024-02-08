@@ -16,10 +16,10 @@ def simpson(f, a, b, n):
     for i in range(1, n, 1):
         ind += h
         print("%.5f         %.5f" % (ind+a, f(a + i * h)))
-        # Percorrer subintervalos de índices ímpares
+        # Percorrer subintervalos de índices ímpares e adiciona 4 vezes o valor da função no ponto médio de cada subintervalo à soma.
         if i % 2 != 0:
             soma += 4 * f(a + i * h)
-        # Percorrer subintervalos de índies pares
+        # Percorrer subintervalos de índies pares e adiciona 2 vezes o valor da função no ponto médio de cada subintervalo à soma.
         elif i % 2 == 0:
             soma += 2 * f(a + i * h)
 
