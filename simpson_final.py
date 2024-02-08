@@ -16,8 +16,10 @@ def simpson(f, a, b, n):
     for i in range(1, n, 1):
         ind += h
         print("%.5f         %.5f" % (ind+a, f(a + i * h)))
+        # Percorrer subintervalos de índices ímpares
         if i % 2 != 0:
             soma += 4 * f(a + i * h)
+        # Percorrer subintervalos de índies pares
         elif i % 2 == 0:
             soma += 2 * f(a + i * h)
 
